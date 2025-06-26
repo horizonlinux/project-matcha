@@ -6,7 +6,7 @@ This repository is a openSuse based image built using Universal Blue techonologi
 It is meant to bring best of both worlds (openSuse and Atomic Fedora) into one thing. It is also meant to gave openSuse missing 3rd flavour which is stable but more up to date.
 This image might be later used for building Horizon images.
 
-#### Container Signing
+# Container Signing
 
 Container signing is important for end-user security and is enabled on all Universal Blue images. It is recommended you set this up, and by default the image builds *will fail* if you don't.
 
