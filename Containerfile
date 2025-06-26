@@ -23,7 +23,7 @@ RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
     --mount=type=cache,dst=/var/log \
     --mount=type=tmpfs,dst=/tmp \
     zypper install --no-confirm kernel-default libostree libostree-grub2 grub2 grub2-x86_64-efi grub2-common nano curl dracut fastfetch && \
-    zypper install --no-confirm --allow-unsigned-rpm /ctx/rpms/distribution-gpg-keys-1.110-1.fc42.noarch.rpm && \
+    zypper install --no-confirm --allow-unsigned-rpm --gpgcheck-allow-unsigned -G /ctx/rpms/distribution-gpg-keys-1.110-1.fc42.noarch.rpm && \
     zypper install --no-confirm --allow-unsigned-rpm /ctx/rpms/bootc-1.1.6-3.fc42.x86_64.rpm && \
     zypper install --no-confirm --allow-unsigned-rpm /ctx/rpms/bootupd-0.2.26-3.fc42.x86_64.rpm && \
     zypper install --no-confirm --allow-unsigned-rpm /ctx/rpms/grub2-pc-2.12-28.fc42.x86_64.rpm && \
