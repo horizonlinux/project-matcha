@@ -3,7 +3,7 @@ FROM scratch AS ctx
 COPY build_files /
 
 # Base Image
-FROM ghcr.io/ublue-os/bazzite:stable
+FROM docker.io/opensuse/tumbleweed
 
 ## Other possible base images include:
 # FROM ghcr.io/ublue-os/bazzite:latest
