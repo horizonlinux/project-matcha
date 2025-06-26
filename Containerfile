@@ -22,7 +22,8 @@ RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
     --mount=type=cache,dst=/var/cache \
     --mount=type=cache,dst=/var/log \
     --mount=type=tmpfs,dst=/tmp \
-    rpm --import https://fedoraproject.org/fedora.gpg && \
+    curl -o /ctx/fedora.gpg https://fedoraproject.org/fedora.gpg && \
+    rpm --import /ctx/fedora.gpg && \
     zypper install --no-confirm kernel-default libostree libostree-grub2 grub2 grub2-x86_64-efi grub2-common nano curl dracut fastfetch && \
     zypper install --no-confirm --allow-unsigned-rpm /ctx/rpms/bootc-1.1.6-3.fc42.x86_64.rpm && \
     zypper install --no-confirm --allow-unsigned-rpm /ctx/rpms/bootupd-0.2.26-3.fc42.x86_64.rpm && \
