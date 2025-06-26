@@ -23,13 +23,13 @@ RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
     --mount=type=cache,dst=/var/log \
     --mount=type=tmpfs,dst=/tmp \
     zypper install --no-confirm kernel-default libostree libostree-grub2 grub2 grub2-x86_64-efi grub2-common nano curl && \
-    zypper install /ctx/rpms/bootc-1.1.6-3.fc42.x86_64.rpm && \
-    zypper install /ctx/rpms/bootupd-0.2.26-3.fc42.x86_64.rpm && \
-    zypper install /ctx/rpms/grub2-pc-2.12-28.fc42.x86_64.rpm && \
-    zypper install /ctx/rpms/grub2-pc-modules-2.12-28.fc42.noarch.rpm && \
-    zypper install /ctx/rpms/grub2-tools-minimal-2.12-28.fc42.x86_64.rpm && \
-    zypper install /ctx/rpms/rpm-ostree-2025.6-6.fc42.x86_64.rpm && \
-     zypper install /ctx/rpms/rpm-ostree-libs-2025.6-6.fc42.x86_64.rpm && \
+    zypper install --no-confirm /ctx/rpms/bootc-1.1.6-3.fc42.x86_64.rpm && \
+    zypper install --no-confirm /ctx/rpms/bootupd-0.2.26-3.fc42.x86_64.rpm && \
+    zypper install --no-confirm /ctx/rpms/grub2-pc-2.12-28.fc42.x86_64.rpm && \
+    zypper install --no-confirm /ctx/rpms/grub2-pc-modules-2.12-28.fc42.noarch.rpm && \
+    zypper install --no-confirm /ctx/rpms/grub2-tools-minimal-2.12-28.fc42.x86_64.rpm && \
+    zypper install --no-confirm /ctx/rpms/rpm-ostree-2025.6-6.fc42.x86_64.rpm && \
+    zypper install --no-confirm /ctx/rpms/rpm-ostree-libs-2025.6-6.fc42.x86_64.rpm && \
     /ctx/build.sh && \
     ostree container commit
     
