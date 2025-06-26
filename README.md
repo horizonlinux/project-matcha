@@ -43,7 +43,3 @@ This provides users a method of verifying the image.
 
 # Want to learn more?
 Read more about building Universal Blue images here: https://github.com/ublue-os/image-template
-- [bOS](https://github.com/bsherman/bos)
-- [Homer](https://github.com/bketelsen/homer/)
-- [Amy OS](https://github.com/astrovm/amyos)
-- [VeneOS](https://github.com/Venefilyn/veneos)
