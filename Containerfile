@@ -23,7 +23,7 @@ RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
     --mount=type=cache,dst=/var/log \
     --mount=type=tmpfs,dst=/tmp \
     zypper install --no-confirm kernel-default libostree libostree-grub2 grub2 grub2-x86_64-efi grub2-common nano curl dracut fastfetch dnf5 && \
-    dnf5 install -y /ctx/rpm/*.rpm && \
+    dnf5 install -y /ctx/rpms/*.rpm && \
     zypper remove dnf5 && \
     /ctx/build.sh && \
     ostree container commit
