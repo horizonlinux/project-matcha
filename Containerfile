@@ -22,7 +22,7 @@ RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
     --mount=type=cache,dst=/var/cache \
     --mount=type=cache,dst=/var/log \
     --mount=type=tmpfs,dst=/tmp \
-    zypper install --no-confirm kernel-default libostree libostree-grub2 grub2 grub2-x86_64-efi grub2-common nano curl dracut fastfetch podman && \
+    zypper install --no-confirm kernel-default libostree libostree-1-1 typelib-1_0-OSTree-1_0 libostree-grub2 grub2 grub2-x86_64-efi grub2-common nano curl dracut fastfetch podman && \
     /ctx/build.sh && \
     ostree container commit
     
